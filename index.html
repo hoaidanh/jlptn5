@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kanji Random Game</title>
     <style>
-        body {
+        html, body  {
             font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 50px;
+            text-align: center; 
+			padding-top: 30%;
+			height: 100%;
+            width: 100%;
         }
         .kanji-word {
             font-size: 50px;
@@ -19,13 +21,13 @@
             font-size: 30px;
             margin-top: 10px;
             color: #2f48d6;
-            display: none; /* ?n cach ??c va ngh?a ban ??u */
+            display: none; 
         }
 		.meaning {
             font-size: 30px;
             margin-top: 10px;
             color: #555;
-            display: none; /* ?n cach ??c va ngh?a ban ??u */
+            display: none;  
         }
         button {
             padding: 10px 20px;
@@ -35,12 +37,8 @@
         }
     </style>
 </head>
-<body  onload="generateRandomKanji()">
-    <h1>Random Word</h1>
-	<div>
-		<button onclick="generateRandomKanji()">Next</button>
-		<button onclick="showReading()">Show</button>
-	</div>
+<body  onload="generateRandomKanji()" onclick="generateRandomKanji()">
+     
 	<div>
         <input type="checkbox" id="showReading" checked/>
         <label for="showReading"></label>
