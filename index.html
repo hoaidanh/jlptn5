@@ -15,7 +15,13 @@
             font-weight: bold;
             cursor: pointer;
         }
-        .reading, .meaning {
+        .reading {
+            font-size: 30px;
+            margin-top: 10px;
+            color: #2f48d6;
+            display: none; /* ?n cach ??c va ngh?a ban ??u */
+        }
+		.meaning {
             font-size: 30px;
             margin-top: 10px;
             color: #555;
@@ -36,7 +42,7 @@
 		<button onclick="showReading()">Show</button>
 	</div>
 	<div>
-        <input type="checkbox" id="showReading" />
+        <input type="checkbox" id="showReading" checked/>
         <label for="showReading"></label>
     </div>
     <div class="kanji-word" id="kanjiWord" onclick="showReading()"></div>
