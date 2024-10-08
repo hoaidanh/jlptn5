@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanji Random Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .kanji-word {
+            font-size: 50px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .reading, .meaning {
+            font-size: 30px;
+            margin-top: 10px;
+            color: #555;
+            display: none; /* ?n cach ??c va ngh?a ban ??u */
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body  onload="generateRandomKanji()">
+    <h1>Random Word</h1>
+	<div>
+		<button onclick="generateRandomKanji()">Next</button>
+		<button onclick="showReading()">Show</button>
+	</div>
+	<div>
+        <input type="checkbox" id="showReading" />
+        <label for="showReading"></label>
+    </div>
+    <div class="kanji-word" id="kanjiWord" onclick="showReading()"></div>
+    <div class="reading" id="kanjiReading"> </div>
+    <div class="meaning" id="kanjiMeaning"> </div>
+	<div class="onyomi" id="kanjiOnyomi"> </div>
+    <div class="kunyomi" id="kanjiKunyomi"> </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
